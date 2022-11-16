@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:fragment="header">
+	<div id="conteneur">
+    <div class="element 1">
+    	<p class="deconnexion" th:if="${session}">
+         <a href="./connection"><img src="images/deconnexion.jpg" alt="Deconnecter" height="70"  width="80"></a>
+      	</p>
+    </div>
+     
+    <div class="element 2"><div th:text="${session.utilisateur.getNom()}">Bonjour vous</div>
+    <h5>******************</h5></div>
+	<div class="element 3"></div>
+	</div>
+</div>
+
+
+      
+    
+        
+ 
+

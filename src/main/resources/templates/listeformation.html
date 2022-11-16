@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<header>
+		<div th:insert="fragment :: header"></div>
+	</header>
+	<p><a href="./principale"><img src="images/precedent.jpg" alt="retour" height="50"  width="60"></a></p>
+	<ul>
+		<th:block  th:each="formation : ${listFormation}">
+    	<li>
+    	<a th:href="@{'/liststagiaire'+'?idformation='+${formation.getId()}}">  
+    	<span th:text="${formation.getNom()}" ></span></a>
+    		</li>
+    	</th:block></ul>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+	<header>
+		<div th:insert="fragment :: header"></div>
+	</header>
+
+	<div id="connexionform">
+		<div class="formulaire">
+			<p style="color: red;">
+				<span th:utext="${ erreur }"></span> 
+			</p>
+			<form method="post" action="./connection" id="form">
+				<label for="login">Login : </label><br /> 
+				<input class="input_formulaire" type="text" name="login" id="login" required /><br /> 
+				<label for="login">Mot de passe : </label><br />
+				<input class="input_formulaire" type="password" name="pwd" id="pwd"
+					required /><br /> 
+				<input class="input_formulaire" type="submit" value="connecter" />
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>
