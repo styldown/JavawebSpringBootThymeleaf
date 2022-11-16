@@ -1,7 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -9,14 +7,14 @@
 </head>
 <body>
 	<header>
-	<%@ include file="header.jsp" %>
+		<div th:insert="fragment :: header"></div>
 	</header>
 	<p><a href='./listformation'><img src="images/precedent.jpg" alt="retour" height="50"  width="60"></a></p>
 	<ul>
-	<c:forEach items="${ listeStagiare}" var="stagiaire">
+	<th:block  th:each="stagiaire : ${listStagiaire}">
     <li><a href='./stagiaire?idStagiaire=<c:out value="${ stagiaire.getId() }"/>'>  
     	<c:out value="${ stagiaire.getNom() } ${ stagiaire.getPrenom() }" ></c:out></a></li>
-</c:forEach>
+	</th:block>
 </ul>
 </body>
 </html>

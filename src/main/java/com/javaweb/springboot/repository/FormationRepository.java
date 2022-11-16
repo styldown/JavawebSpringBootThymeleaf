@@ -9,4 +9,5 @@ import com.javaweb.springboot.model.Formation;
 
 public interface FormationRepository extends JpaRepository<Formation, Integer> {
 	ArrayList<Formation> findByFactory(Factory fac);
+	Formation findById(int id);
 }

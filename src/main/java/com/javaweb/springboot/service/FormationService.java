@@ -1,7 +1,6 @@
 package com.javaweb.springboot.service;
 
 import java.util.ArrayList;
-
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +19,11 @@ public class FormationService implements IFormationService{
 	@Override
 	public ArrayList<Formation> findByFactory(Factory fac) {  
 		return formation.findByFactory(fac);
+	}
+
+	@Override
+	public Formation findById(int id) {
+		return formation.findById(id);
 	}
 	
 	

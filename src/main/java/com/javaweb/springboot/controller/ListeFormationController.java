@@ -19,18 +19,18 @@ import com.javaweb.springboot.service.FormationService;
 public class ListeFormationController {
 	
 	@Autowired
-	FormationService listService;
+	FormationService formService;
 
 	@ModelAttribute("listFormation")
 	public ArrayList<Formation> addListFormationToModel(HttpSession session){
 		Factory fac=(Factory) session.getAttribute("factory");
-		return listService.findByFactory(fac);
+		return formService.findByFactory(fac);
 	}
 	
 	
 	
 	@RequestMapping(value={"/listformation"} , method=RequestMethod.GET)
-	public String principale(Model model) {
+	public String listeFormation(Model model) {
 		@SuppressWarnings("unchecked")
 		ArrayList<Formation> list=(ArrayList<Formation>)model.getAttribute("listFormation");
 		for(Formation form:list) {
