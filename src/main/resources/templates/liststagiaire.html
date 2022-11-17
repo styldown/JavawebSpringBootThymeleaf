@@ -12,8 +12,10 @@
 	<p><a href='./listformation'><img src="images/precedent.jpg" alt="retour" height="50"  width="60"></a></p>
 	<ul>
 	<th:block  th:each="stagiaire : ${listStagiaire}">
-    <li><a href='./stagiaire?idStagiaire=<c:out value="${ stagiaire.getId() }"/>'>  
-    	<c:out value="${ stagiaire.getNom() } ${ stagiaire.getPrenom() }" ></c:out></a></li>
+    <li>
+    	<a th:href="@{'/stagiaire'+'?idStagiaire='+${stagiaire.getId()}}">  
+    	<span th:text="${stagiaire.getNom()}+' '+${stagiaire.getPrenom()}" ></span></a> 
+    	</li>
 	</th:block>
 </ul>
 </body>

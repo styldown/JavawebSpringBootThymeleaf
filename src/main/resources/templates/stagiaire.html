@@ -1,7 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -9,14 +8,15 @@
 </head>
 <body>
 	<header>
-	<%@ include file="header.jsp" %>
+		<div th:insert="fragment :: header"></div>
 	</header>
 	<p><a href='./liststagiaire?idFormation=<c:out value="${ idFormation }"/>'><img src="images/precedent.jpg" alt="retour" height="50"  width="60"></a></p>
-	<h3> <c:out value="${ stagiaire.getPrenom()} ${ stagiaire.getNom() }"/> </h3>
-	<p>
-		Adresse: <c:out value="${ stagiaire.getAdresse() }"/><br/>
-		Tel: <c:out value="${ stagiaire.getTel() }"/><br/>
-		Email: <c:out value="${ stagiaire.getEmail() }"/><br/>
-	</p>
+	<h3><span th:text="${stagiaire.getNom()}+' '+${stagiaire.getPrenom()}" ></span> </h3>
+	<p>Email: <span th:text="${ stagiaire.getEmail() }"></span></p>
+	<p>Tel: <span th:text="${ stagiaire.getTel() }"></span></p>
+	<p>Adresse: <span th:text="${ stagiaire.getAdresse() }"></span></p>
+	
+	
+	
 </body>
 </html>

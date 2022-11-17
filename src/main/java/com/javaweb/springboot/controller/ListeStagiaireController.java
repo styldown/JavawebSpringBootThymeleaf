@@ -27,8 +27,8 @@ public class ListeStagiaireController {
 	public ArrayList<Stagiaire> addListStagiaireToModel(HttpServletRequest request){
 		int id=Integer.parseInt(request.getParameter("idformation"));
 		Formation form= formService.findById(id);
-		ArrayList<Stagiaire> stagiaire=  stagService.findByFormation(form);
-		return stagiaire;
+		ArrayList<Stagiaire> lisstagiaire=  stagService.findByFormation(form);
+		return lisstagiaire;
 	}
 	
 	@RequestMapping(value="/liststagiaire", method=RequestMethod.GET)
