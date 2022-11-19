@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 <div th:fragment="header">
 	<div id="conteneur">
     <div class="element 1">
     	<p class="deconnexion" th:if="${session}">
-         <a href="./connection"><img src="images/deconnexion.jpg" alt="Deconnecter" height="70"  width="80"></a>
+         <a href="/logout"><img src="images/deconnexion.jpg" alt="Deconnecter" height="70"  width="80"></a>
       	</p>
     </div>
      
@@ -18,6 +19,18 @@
 	<div class="element 3"></div>
 	</div>
 </div>
+
+<div th:fragment="menu">
+	<mark th:text="${ session.factory.getNom() }"></mark>
+	<ul>
+		<li><a href="/listformation">Liste formations </a></li>
+		<li><a href="/ajoutstagiaire">Ajouter stagiaire</a></li>
+		<li><a href="/ajoutformation">Ajouter formation</a></li>
+	</ul>
+</div>
+</body>
+</html>
+
 
 
       

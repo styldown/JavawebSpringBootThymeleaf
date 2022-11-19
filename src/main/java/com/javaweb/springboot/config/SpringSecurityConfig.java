@@ -32,7 +32,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
         		//.antMatchers("/").hasRole("user")
             	.anyRequest().authenticated()
             	.and()
-            	.formLogin();
+            	.formLogin().defaultSuccessUrl("/", true)
+            	//defaultSuccessUrl("/pricipale");
+        		.and()
+        		.logout().logoutUrl("/logout").logoutSuccessUrl("/");
 	} 
 	//@Autowired
     //private DataSource dataSource;

@@ -1,8 +1,6 @@
 package com.javaweb.springboot.service;
 
 import java.util.ArrayList;
-import java.util.Optional;
-
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +26,11 @@ public class StagiaireService implements IStagiaireService {
 	public Stagiaire findById(int id) {
 		Stagiaire stagiaire=stagiaireRepos.findById(id);
 		return stagiaire;
+	}
+
+	@Override
+	public void save(Stagiaire stag) {
+		stagiaireRepos.save(stag);
 	}
 
 }
