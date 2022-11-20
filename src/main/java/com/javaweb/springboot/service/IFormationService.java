@@ -9,4 +9,5 @@ public interface IFormationService {
 	
 	Formation findById(int id);
 	ArrayList<Formation> findByFactory(Factory fac);
+	public Formation save(Formation formation);
 }

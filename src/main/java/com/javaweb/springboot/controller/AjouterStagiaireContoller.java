@@ -40,7 +40,7 @@ public class AjouterStagiaireContoller {
 	}
 	
 	@PostMapping("/ajoutstagiaire")
-	public String ajoutStagiaireSubmit(@ModelAttribute Stagiaire stagiaire, Model model, HttpSession session) {
+	public String ajoutStagiaireSubmit(@ModelAttribute Stagiaire stagiaire,HttpSession session) {
 		stagiaire.setFactory((Factory)session.getAttribute("factory"));
 		stageService.save(stagiaire);
 		System.out.println(stagiaire.getNom());

@@ -14,16 +14,21 @@ import com.javaweb.springboot.repository.FormationRepository;
 @Service
 public class FormationService implements IFormationService{
 	@Autowired
-	FormationRepository formation;
+	FormationRepository formationRep;
 
 	@Override
 	public ArrayList<Formation> findByFactory(Factory fac) {  
-		return formation.findByFactory(fac);
+		return formationRep.findByFactory(fac);
 	}
 
 	@Override
 	public Formation findById(int id) {
-		return formation.findById(id);
+		return formationRep.findById(id);
+	}
+
+	public Formation save(Formation formation) {
+		return formationRep.save(formation);
+		  
 	}
 	
 	

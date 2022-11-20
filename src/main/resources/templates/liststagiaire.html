@@ -6,17 +6,30 @@
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-	<header>
+	<div id="header">
 		<div th:insert="fragment :: header"></div>
-	</header>
-	<p><a href='./listformation'><img src="images/precedent.jpg" alt="retour" height="50"  width="60"></a></p>
-	<ul>
-	<th:block  th:each="stagiaire : ${listStagiaire}">
-    <li>
-    	<a th:href="@{'/stagiaire'+'?idStagiaire='+${stagiaire.getId()}}">  
-    	<span th:text="${stagiaire.getNom()}+' '+${stagiaire.getPrenom()}" ></span></a> 
-    	</li>
-	</th:block>
-</ul>
+	</div>
+	<div id="main">
+		<div id="menu">
+			<div th:insert="fragment :: menu"></div>
+		</div>
+
+		<div id="contenu">
+				<th:block th:each="stagiaire : ${listStagiaire}">
+					<p><a
+						th:href="@{'/stagiaire'+'?idStagiaire='+${stagiaire.getId()}}">
+							<span
+							th:text="${stagiaire.getNom()}+' '+${stagiaire.getPrenom()}"></span>
+					</a></p>
+				</th:block>
+		</div>
+	</div>
+
+	<div id="footer">
+		<a
+			href="https://simplon.co/?utm_term=simplon&utm_campaign=Simplon-Marque-Pur&utm_source=adwords&utm_medium=ppc&hsa_acc=9500748942&hsa_cam=16685237686&hsa_grp=137498028160&hsa_ad=589770540606&hsa_src=g&hsa_tgt=aud-1653719853808:kwd-337968428781&hsa_kw=simplon&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQiA99ybBhD9ARIsALvZavXeY8O5HsRz1UB2pReD5Yq9qlW88bG9fSK_MbHdq6jCD_xjsIYR-CIaAhOtEALw_wcB">Simplon,
+			site officiel</a>
+	</div>
+
 </body>
 </html>

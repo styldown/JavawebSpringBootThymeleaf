@@ -36,12 +36,14 @@ html,body {
 }
 
 #main {
+	color: black;
+	width:100%;
 	height:70%;
 	margin-top:10px;
+	margin-bottom:10px;
 }
 
 #menu  {
-	text-align:center;
 	border: 3px blue dashed;
 	float:left;
 	width:20%;
@@ -50,8 +52,10 @@ html,body {
 }
 
 #contenu {
+	text-align:center;
+	border: 3px blue dashed;
 	background-color:#ABB0FC;
-	width:80%;
+	width:99%;
 	height:100%;
 }
 

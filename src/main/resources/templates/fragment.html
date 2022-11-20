@@ -14,19 +14,17 @@
       	</p>
     </div>
      
-    <div class="element 2"><div th:text="${session.utilisateur.getNom()}">Bonjour vous</div>
-    <h5>******************</h5></div>
+    <div class="element 2"><h3 th:text="${session.utilisateur.getNom()}+' '+ ${session.utilisateur.getPrenom()}"></h3>
+    <h1><mark th:text="${ session.factory.getNom() }"></mark></h1></div>
 	<div class="element 3"></div>
 	</div>
 </div>
 
 <div th:fragment="menu">
-	<mark th:text="${ session.factory.getNom() }"></mark>
-	<ul>
-		<li><a href="/listformation">Liste formations </a></li>
-		<li><a href="/ajoutstagiaire">Ajouter stagiaire</a></li>
-		<li><a href="/ajoutformation">Ajouter formation</a></li>
-	</ul>
+	<h2 Align=Center><mark th:text="${ session.factory.getNom() }"></mark></h2>
+		<p><a href="/listformation">Liste formations </a></p>
+		<p><a href="/ajoutstagiaire">Ajouter stagiaire</a></p>
+		<p><a href="/ajoutformation">Ajouter formation</a></p>
 </div>
 </body>
 </html>
