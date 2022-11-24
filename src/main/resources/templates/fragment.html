@@ -10,7 +10,7 @@
 	<div id="conteneur">
     <div class="element 1">
     	<p class="deconnexion" th:if="${session}">
-         <a href="/logout"><img src="images/deconnexion.jpg" alt="Deconnecter" height="70"  width="80"></a>
+         <a href="./logout"><img src="images/deconnexion.jpg" alt="Deconnecter" height="70"  width="80"></a>
       	</p>
     </div>
      
@@ -22,9 +22,9 @@
 
 <div th:fragment="menu">
 	<h2 Align=Center><mark th:text="${ session.factory.getNom() }"></mark></h2>
-		<p><a href="/listformation">Liste formations </a></p>
-		<p><a href="/ajoutstagiaire">Ajouter stagiaire</a></p>
-		<p><a href="/ajoutformation">Ajouter formation</a></p>
+		<p><a href="./listformation">Liste formations </a></p>
+		<p><a href="./ajoutstagiaire">Ajouter stagiaire</a></p>
+		<p><a href="./ajoutformation">Ajouter formation</a></p>
 </div>
 </body>
 </html>

@@ -19,6 +19,5 @@ public class AuthentificationService implements IAuthentificationService {
 	@Override
 	public Authentification findByLogin(String login) {
 		return auth.findByLogin(login);
-	}
-
+	} 
 }

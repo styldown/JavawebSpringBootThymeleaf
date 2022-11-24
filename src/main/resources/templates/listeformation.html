@@ -17,7 +17,7 @@
 		<div id="contenu">
 				<th:block th:each="formation : ${listFormation}">
 					<p><a
-						th:href="@{'/liststagiaire'+'?idformation='+${formation.getId()}}">
+						th:href="@{'./liststagiaire'+'?idformation='+${formation.getId()}}">
 							<span th:text="${formation.getNom()}"></span>
 					</a></p>
 				</th:block>

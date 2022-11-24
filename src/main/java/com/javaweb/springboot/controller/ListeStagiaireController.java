@@ -34,7 +34,7 @@ public class ListeStagiaireController {
 	@RequestMapping(value="/liststagiaire", method=RequestMethod.GET)
 	public String ListStagiaire() {
 		
-		return "listStagiaire";
+		return "liststagiaire";
 		
 	}
 	

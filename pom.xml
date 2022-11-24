@@ -8,10 +8,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.exo</groupId>
-	<artifactId>JavawebSpringBootThymeleaf</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>javaweb</artifactId>
+	<version>1</version>
 	<packaging>war</packaging>
-	<name>JavawebSpringBootThymeleaf</name>
+	<name>javaweb</name>
 	<description>Spring boot, JPA, Spring security + Thymeleaf</description>
 	<properties>
 		<java.version>11</java.version>
@@ -40,19 +40,32 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+	<groupId>org.apache.tomcat.embed</groupId>
+	<artifactId>tomcat-embed-jasper</artifactId>
+	<scope>provided</scope>
+</dependency>
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-tomcat</artifactId>
+	<scope>provided</scope>
+</dependency>
 	</dependencies>
 
 	<build>
+	<finalName>javaweb</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-site-plugin</artifactId>
+    <version>3.7.1</version>
+</plugin>
 		</plugins>
 	</build>
+	
+	
 
 </project>
