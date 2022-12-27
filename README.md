@@ -5,6 +5,6 @@
     ###### Un conteneur MYSQL et un conteneur Tomcat:9
 #### je vous laisse des identifiant si vous voulez visualiser l'application deployée:
 
-##### http://3.92.45.233/javaweb
+##### http://18.207.248.26/javaweb
 ##### login: login1    
 ##### PWD: admin
